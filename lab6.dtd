@@ -1,0 +1,31 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT xs:schema (xs:element)>
+<!ATTLIST xs:schema
+  xmlns:xs CDATA #FIXED 'http://www.w3.org/2001/XMLSchema'
+  attributeFormDefault NMTOKEN #REQUIRED
+  elementFormDefault NMTOKEN #REQUIRED>
+
+<!ELEMENT xs:element (xs:complexType)*>
+<!ATTLIST xs:element
+  xmlns:xs CDATA #FIXED 'http://www.w3.org/2001/XMLSchema'
+  maxOccurs NMTOKEN #IMPLIED
+  minOccurs CDATA #IMPLIED
+  name NMTOKEN #REQUIRED
+  type NMTOKEN #IMPLIED>
+
+<!ELEMENT xs:complexType (xs:attribute|xs:sequence*)>
+<!ATTLIST xs:complexType
+  xmlns:xs CDATA #FIXED 'http://www.w3.org/2001/XMLSchema'
+  mixed NMTOKEN #IMPLIED>
+
+<!ELEMENT xs:attribute EMPTY>
+<!ATTLIST xs:attribute
+  xmlns:xs CDATA #FIXED 'http://www.w3.org/2001/XMLSchema'
+  name NMTOKEN #REQUIRED
+  type NMTOKEN #REQUIRED
+  use NMTOKEN #REQUIRED>
+
+<!ELEMENT xs:sequence (xs:element)*>
+<!ATTLIST xs:sequence
+  xmlns:xs CDATA #FIXED 'http://www.w3.org/2001/XMLSchema'>
